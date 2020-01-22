@@ -6,11 +6,17 @@ import { Provider } from 'react-redux';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 import reducers from './reducers';
+import { Helmet } from 'react-helmet'
+
 
 const store = createStore(reducers);
 
+
 ReactDOM.render(
     <Provider store={store}>
+        <Helmet>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        </Helmet>
         <App/>
     </Provider>,
     document.getElementById('root')
