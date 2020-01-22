@@ -7,7 +7,7 @@ import App from './views/templates/containers/App';
 import * as serviceWorker from './serviceWorker';
 import reducers from './store/reducers';
 import { Helmet } from 'react-helmet'
-
+import { BrowserRouter } from 'react-router-dom';
 
 const store = createStore(reducers);
 
@@ -17,7 +17,9 @@ ReactDOM.render(
         <Helmet>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         </Helmet>
-        <App/>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
     </Provider>,
     document.getElementById('root')
 );
