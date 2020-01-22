@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import App from './containers/App';
+import App from './views/templates/containers/App';
 import * as serviceWorker from './serviceWorker';
-import reducers from './reducers';
+import reducers from './store/reducers';
 import { Helmet } from 'react-helmet'
 
 
